@@ -205,6 +205,13 @@ view: order_items {
       drill_fields: [detail*]
     }
 
+    measure: total_gross_margin_added {
+      type: sum
+      value_format_name: usd
+      sql: ${gross_margin} * .5 ;;
+      drill_fields: [detail*]
+    }
+
   set: detail {
     fields: [id, order_id, status, created_date, sale_price, products.brand, products.item_name, users.portrait, users.name, users.email]
   }
