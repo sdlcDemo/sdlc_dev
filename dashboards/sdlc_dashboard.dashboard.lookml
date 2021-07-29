@@ -1,6 +1,7 @@
 - dashboard: sdlc_dashboard
   title: SDLC Dashboard
   layout: newspaper
+  preferred_viewer: dashboards
   elements:
   - title: Order Count Over Time
     name: Order Count Over Time
