@@ -130,25 +130,6 @@ view: order_items {
     sql: ${TABLE}.sale_price ;;
   }
 
-    dimension: gross_margin {
-      type: number
-      value_format_name: usd
-      sql: ${sale_price} - ${inventory_items.cost} ;;
-    }
-
-    measure: total_gross_margin {
-      type: sum
-      value_format_name: usd
-      sql: ${gross_margin} ;;
-      drill_fields: [detail*]
-    }
-
-    measure: total_gross_margin_v2 {
-      type: sum
-      value_format_name: usd
-      sql: ${gross_margin}*2 ;;
-      drill_fields: [detail*]
-    }
 
 
   measure: total_sale_price {
