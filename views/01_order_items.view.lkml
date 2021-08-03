@@ -143,6 +143,13 @@ view: order_items {
       drill_fields: [detail*]
     }
 
+    measure: total_gross_margin_v2 {
+      type: sum
+      value_format_name: usd
+      sql: ${gross_margin}*2 ;;
+      drill_fields: [detail*]
+    }
+
 
   measure: total_sale_price {
     type: sum
